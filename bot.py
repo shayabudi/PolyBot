@@ -43,6 +43,9 @@ class QuoteBot(Bot):
 
 
 class YoutubeBot(Bot):
+    def _message_handler(self, update, context):
+        """Main messages handler"""
+        self.send_text(update, f'Your original message: {update.message.text}')
     pass
 
 

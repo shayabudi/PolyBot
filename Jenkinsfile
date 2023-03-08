@@ -1,6 +1,12 @@
 pipeline {
     agent any
-
+    options {
+    buildDiscarder(logRotator(daysToKeepStr: '30'))
+    disableConcurrentBuilds()
+    timestamps()
+    timeout(time: 10, unit: 'MINUTES')
+}
+}
     stages {
         stage('Build') {
             steps {

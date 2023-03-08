@@ -1,5 +1,12 @@
 pipeline {
-    agent any
+    agent  docker {
+         image 'jenkins-agent:latest'
+        args  '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+    }
+     environment{
+     SNYK_TOKEN = credentials('snyk-token')
+}
+
     options {
     buildDiscarder(logRotator(daysToKeepStr: '30'))
     disableConcurrentBuilds()

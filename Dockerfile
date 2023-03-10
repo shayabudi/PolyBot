@@ -1,4 +1,4 @@
-FROM python:3.8.12-slim-buster
+FROM python:3.12.0a5-slim-buster
 WORKDIR /PolyBot
 COPY bot.py bot.py
 COPY utils.py utils.py

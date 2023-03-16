@@ -26,22 +26,22 @@ pipeline {
 
         stage('Build Bot app') {
             steps {
-                  sh "docker build -t shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER} . "
+                  sh "docker build -t shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} . "
                 }
             }
 
         stage('snyk test - Bot image') {
             steps {
-                sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
+                sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
             }
         }
 
         stage('push image to rep') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-shani', passwordVariable: 'pass', usernameVariable: 'user')]){
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-shay', passwordVariable: 'pass', usernameVariable: 'user')]){
 
                     sh "docker login --username $user --password $pass"
-                    sh "docker push shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+                    sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }
       }
@@ -49,7 +49,7 @@ pipeline {
   
   post{
     always{
-        sh "docker rmi shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+        sh "docker rmi shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
     }
   }
   

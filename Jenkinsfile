@@ -1,42 +1,60 @@
 pipeline {
-    agent  docker {
-         image 'jenkins-agent:latest'
-        args  '--user root -v /var/run/docker.sock:/var/run/docker.sock'
-    }
-     environment{
-     SNYK_TOKEN = credentials('snyk-token')
-}
 
     options {
-    buildDiscarder(logRotator(daysToKeepStr: '30'))
-    disableConcurrentBuilds()
-    timestamps()
-    timeout(time: 10, unit: 'MINUTES')
-}
-}
-    stages {
-        stage('Build') {
-            steps {
-               withCredentials([usernamePassword(credentialsId: 'git-shay-ron', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-               sh "sudo docker build -t shayabudi/PolyBot-${env.Build_NUMBER} ."
-               sh "sudo docker login --username $user --password $pass"
-               sh "sudo docker push shayabudi/PolyBot-${env.Build_NUMBER}"
-
-
-
-
-               sh 'echo building...'
-            }
-        }
-        stage('Stage II') {
-            steps {
-                sh 'echo "stage II..."'
-            }
-        }
-        stage('Stage III ...') {
-            steps {
-                sh 'echo echo "stage III..."'
-            }
-        }
+        buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '10'))
+        disableConcurrentBuilds()
+        timestamps()
+        //retry(2)
+        timeout(time: 3, unit: 'MINUTES')
     }
+
+        
+    agent{
+         docker{
+              image 'jenkins-agent:latest'
+              args  '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+           }
+    }
+
+    //insert credential to environment variable
+    environment{
+        SNYK_TOKEN=credentials('snyk-token')
+    }
+
+
+    stages {
+
+        stage('Build Bot app') {
+            steps {
+                  sh "docker build -t shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER} . "
+                }
+            }
+
+        stage('snyk test - Bot image') {
+            steps {
+                sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
+            }
+        }
+
+        stage('push image to rep') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-shani', passwordVariable: 'pass', usernameVariable: 'user')]){
+
+                    sh "docker login --username $user --password $pass"
+                    sh "docker push shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+                    }
+           }
+      }
+  }
+  
+  post{
+    always{
+        sh "docker rmi shaniben/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+    }
+  }
+  
+  
+  
+  
+  
 }

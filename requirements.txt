@@ -1,3 +1,5 @@
 python-telegram-bot==13.7
 youtube-dl>=2021.12.17
 loguru
+pylint
+pytest

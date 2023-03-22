@@ -17,15 +17,16 @@ pipeline {
     }
 
     //insert credential to environment variable
-    //environment{
-      //  SNYK_TOKEN=credentials('snyk-token')
-    //}
+    environment{
+      SNYK_TOKEN=credentials('snyk-token')
+    }
 
 
     stages {
 
         stage('Build Bot app') {
             steps {
+             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
                   sh "docker build -t shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} . "
                   sh "docker login --username $user --password $pass"
                 }
@@ -39,10 +40,7 @@ pipeline {
 
         stage('push image to rep') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]){
-
-
-                    sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
+                     sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }
       }

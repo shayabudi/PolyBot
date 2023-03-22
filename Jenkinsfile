@@ -38,7 +38,7 @@ pipeline {
 
         stage('push image to rep') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-shay', passwordVariable: 'pass', usernameVariable: 'user')]){
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]){
 
                     sh "docker login --username $user --password $pass"
                     sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"

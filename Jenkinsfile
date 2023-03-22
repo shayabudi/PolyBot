@@ -27,6 +27,7 @@ pipeline {
         stage('Build Bot app') {
             steps {
                   sh "docker build -t shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} . "
+                  sh "docker login --username $user --password $pass"
                 }
             }
 
@@ -40,7 +41,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]){
 
-                    sh "docker login --username $user --password $pass"
+
                     sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }

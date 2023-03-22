@@ -31,7 +31,7 @@ pipeline {
                   sh "docker login --username $user --password $pass"
                 }
             }
-
+         }
        stage('snyk test - Bot image') {
             steps {
                 sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"

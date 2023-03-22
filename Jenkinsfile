@@ -17,9 +17,9 @@ pipeline {
     }
 
     //insert credential to environment variable
-    environment{
+    //environment{
       //  SNYK_TOKEN=credentials('snyk-token')
-    }
+    //}
 
 
     stages {

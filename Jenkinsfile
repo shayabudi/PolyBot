@@ -18,7 +18,7 @@ pipeline {
 
     //insert credential to environment variable
     environment{
-        SNYK_TOKEN=credentials('snyk-token')
+      SNYK_TOKEN=credentials('snyk-token')
     }
 
 
@@ -26,11 +26,13 @@ pipeline {
 
         stage('Build Bot app') {
             steps {
-                  sh "docker build -t shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} . "
+             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                  sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
+                  sh "docker login --username $user --password $pass"
                 }
             }
-
-        stage('snyk test - Bot image') {
+         }
+       stage('snyk test - Bot image') {
             steps {
                 sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
             }
@@ -38,23 +40,15 @@ pipeline {
 
         stage('push image to rep') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-shay', passwordVariable: 'pass', usernameVariable: 'user')]){
-
-                    sh "docker login --username $user --password $pass"
-                    sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
+                     sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }
       }
   }
   
-  post{
-    always{
-        sh "docker rmi shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
-    }
-  }
-  
-  
-  
-  
-  
-}
+  //post{
+    //always{
+      //  sh "docker rmi shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
+    //}
+  //}
+

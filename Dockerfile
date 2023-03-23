@@ -1,9 +1,14 @@
-FROM python:3.8.12-slim-buster
-WORKDIR /PolyBot
-COPY bot.py bot.py
-COPY utils.py utils.py
-COPY .telegramToken .telegramToken
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-CMD ["python3", "bot.py"]
+FROM python:3.8-slim-buster
 
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the requirements.txt file to the container
+COPY requirements.txt .
+
+# Install the required dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+#Run the command to start the bot
+
+CMD ["python3", "bot.py"]

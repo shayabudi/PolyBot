@@ -4,10 +4,10 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 
 # Copy the requirements.txt file to the container
-COPY requirements.txt .
+COPY . /app/
 
 # Install the required dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 #Run the command to start the bot
 

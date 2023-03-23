@@ -46,9 +46,9 @@ pipeline {
       }
   }
   
-  //post{
-    //always{
-      //  sh "docker rmi shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
-    //}
-  //}
+  post{
+    always{
+        sh "docker rmi shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
+    }
+  }
 

@@ -26,11 +26,12 @@ pipeline {
 
         stage('Build Bot app') {
             steps {
-             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                  sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
-                  sh "docker login --username $user --password $pass"
+                sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
+                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                      sh "echo $PASS | docker login --username $USER --password-stdin"
+
+                    }
                 }
-            }
          }
        stage('snyk test - Bot image') {
             steps {

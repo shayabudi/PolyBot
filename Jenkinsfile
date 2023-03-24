@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
                  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                      sh "echo $PASS | docker login --username $USER --password-stdin"
+                      sh "echo '$PASS' | docker login --username $USER --password-stdin"
 
                     }
                 }

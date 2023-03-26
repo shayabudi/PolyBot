@@ -51,7 +51,7 @@ pipeline {
                 sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
 
 
-                    }
+
                 }
          }
        stage('snyk test - Bot image') {

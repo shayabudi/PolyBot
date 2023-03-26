@@ -23,6 +23,28 @@ pipeline {
 
 
     stages {
+        stage('test') {
+            parallel{
+              stage('pytest'){
+                   steps{
+                      withCredentials([file(credentialsId: 'telegramToken', variable: 'TELEGRAM_TOKEN')])
+                      {
+                       sh "cp ${TELEGRAM_TOKEN} .telegramToken"
+                       sh 'pip3 install -r requirements.txt'
+                       sh "python3 -m pytest --junitxml results.xml test/*.py"
+                     }
+                   }
+               }
+
+                stage('pylint'){
+                   steps{
+
+                            sh "python3 -m pylint *.py || true"
+
+                   }
+               }
+            }
+        }
 
         stage('Build Bot app') {
             steps {
@@ -35,13 +57,13 @@ pipeline {
          }
        stage('snyk test - Bot image') {
             steps {
-                sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
+                sh "snyk container test --severity-threshold=critical --policy-path=PolyBot/.snyk shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} --file=Dockerfile || true"
             }
         }
 
         stage('push image to rep') {
             steps {
-                     sh "docker push shayabudi/PolyBot:poly-bot-${env.BUILD_NUMBER}"
+                     sh "docker push shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }
       }

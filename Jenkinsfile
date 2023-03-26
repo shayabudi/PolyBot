@@ -48,7 +48,7 @@ pipeline {
 
         stage('Build Bot app') {
             steps {
-                sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
+                sh "docker build -t shayabudi8/polybot:poly-bot-${env.BUILD_NUMBER} . "
 
 
 

@@ -13,7 +13,7 @@ class TestBot(unittest.TestCase):
         self.updater = MagicMock()
 
         # create a bot object with the mock updater
-        self.bot = QuoteBot(_token)
+        self.bot = QuoteBot(_token.strip())
         self.bot.updater = self.updater
 
     def test_send_text(self):

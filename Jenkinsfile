@@ -49,8 +49,7 @@ pipeline {
         stage('Build Bot app') {
             steps {
                 sh "docker build -t shayabudi/polybot:poly-bot-${env.BUILD_NUMBER} . "
-                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                      sh "echo '$PASS' | docker login --username $USER --password-stdin"
+
 
                     }
                 }
@@ -63,6 +62,8 @@ pipeline {
 
         stage('push image to rep') {
             steps {
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                      sh "echo '$PASS' | docker login --username $USER --password-stdin"
                      sh "docker push shayabudi/polybot:poly-bot-${env.BUILD_NUMBER}"
                     }
            }

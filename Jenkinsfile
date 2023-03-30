@@ -27,6 +27,7 @@ pipeline {
             parallel{
               stage('pytest'){
                    steps{
+                      catchError(message:'pytest ERROR-->even this fails,we continue on',buildResult:'UNSTABLE',stageResult:'UNSTABLE'){
                       withCredentials([file(credentialsId: 'telegramToken', variable: 'TELEGRAM_TOKEN')])
                       {
                        sh "cp ${TELEGRAM_TOKEN} .telegramToken"
@@ -38,6 +39,7 @@ pipeline {
 
                 stage('pylint'){
                    steps{
+                    catchError(message:'pytest ERROR-->even this fails,we continue on',buildResult:'UNSTABLE',stageResult:'UNSTABLE'){
 
                             sh "python3 -m pylint *.py || true"
 

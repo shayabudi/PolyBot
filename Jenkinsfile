@@ -39,7 +39,7 @@ pipeline {
 
                 stage('pylint'){
                    steps{
-                    catchError(message:'pytest ERROR-->even this fails,we continue on',buildResult:'UNSTABLE',stageResult:'UNSTABLE'){
+                    catchError(message:'pylint ERROR',buildResult:'UNSTABLE',stageResult:'UNSTABLE'){
 
                             sh "python3 -m pylint *.py || true"
 

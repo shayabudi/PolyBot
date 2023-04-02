@@ -78,6 +78,6 @@ pipeline {
                 sh "docker rmi shayabudi8/polybot-${env.BUILD_NUMBER}"
             }
 
-       }
+   }
 
-  }
+}

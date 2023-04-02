@@ -72,7 +72,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]){
                     sh "docker login --username $user --password $pass"
-                    sh "docker push shayabudi8/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+                    sh "docker push shayabudi8/polybot:poly-bot-${env.BUILD_NUMBER}"
                      }//close Credentials
                   }//close steps
          }//close stage push
@@ -81,7 +81,7 @@ pipeline {
     }//close stages
       post{
             always{
-                sh "docker rmi shayabudi8/shani-repo:poly-bot-${env.BUILD_NUMBER}"
+                sh "docker rmi shayabudi8/polybot:poly-bot-${env.BUILD_NUMBER}"
                   }
           }
 

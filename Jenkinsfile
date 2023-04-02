@@ -22,7 +22,7 @@ pipeline {
     //insert credential to environment variable
     //insert to specific environment variable (must to this name: SNYK_TOKEN) my snyk's token
     environment{
-        SNYK_TOKEN=credentials('snykToken')
+        SNYK_TOKEN=credentials('snyk-token')
     }
 
 

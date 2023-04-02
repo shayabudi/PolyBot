@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22de1698-2fee-4c27-a78d-261fd2a36e15" name="Changes" comment="Jenkinsfile docker login">
+    <list default="true" id="22de1698-2fee-4c27-a78d-261fd2a36e15" name="Changes" comment="}">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_03_2023_13_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_03_2023_13_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/polytest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/polytest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,35 @@
       <option name="project" value="LOCAL‎" />
       <updated>1679509976913</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎-00010" summary="Jenkinsfile docker login">
+      <created>1680449430571</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL‎-00010" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1680449430571</updated>
+    </task>
+    <task id="LOCAL‎-00011" summary="Jenkinsfile docker login">
+      <created>1680449548531</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL‎-00011" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1680449548531</updated>
+    </task>
+    <task id="LOCAL‎-00012" summary="Jenkinsfile">
+      <created>1680449710932</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL‎-00012" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1680449710932</updated>
+    </task>
+    <task id="LOCAL‎-00013" summary="}">
+      <created>1680449799080</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL‎-00013" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1680449799080</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +163,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jenkins &amp; polytest" />
     <MESSAGE value="polytest" />
-    <option name="LAST_COMMIT_MESSAGE" value="polytest" />
+    <MESSAGE value="Jenkinsfile docker login" />
+    <MESSAGE value="Jenkinsfile" />
+    <MESSAGE value="}" />
+    <option name="LAST_COMMIT_MESSAGE" value="}" />
   </component>
 </project>

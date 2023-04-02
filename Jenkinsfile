@@ -75,5 +75,5 @@ pipeline {
   post{
     always{
         sh "docker rmi shayabudi8/polybot:poly-bot-${env.BUILD_NUMBER}"
+           }
     }
-  }

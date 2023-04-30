@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: polybot
-        image: shayabudi8/polybotimage2:latest
+        image: shayabudi8/polybot:poly-bot-77

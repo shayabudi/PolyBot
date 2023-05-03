@@ -15,5 +15,3 @@ spec:
       containers:
       - name: nginx
         image: shayabudi8/nginx:nginx
-        ports:
-          - containerPort: 8082

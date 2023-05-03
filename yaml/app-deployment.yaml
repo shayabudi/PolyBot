@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: polybot
+        tier: backend
     spec:
       containers:
       - name: polybot

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   spec:
-    selector:
+  selector:
     matchLabels:
       app: nginx
       tier: backend

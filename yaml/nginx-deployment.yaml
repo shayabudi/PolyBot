@@ -1,14 +1,11 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: demo_app
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-spec:
+  namespace: demo-app
+  labels:
+    app.kubernetes.io/name: demo-app
+  spec:
   selector:
     matchLabels:
       app: nginx
@@ -23,3 +20,19 @@ spec:
       containers:
       - name: nginx
         image: shayabudi8/nginx:nginx
+        resources:
+          limits:
+            cpu: "1"
+            memory: "100Mi"
+
+          requests:
+            cpu: "0.5"
+            memory: "50Mi"
+
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /var/www/html/index.html
+            initialDelaySeconds: 1
+            periodSeconds: 5

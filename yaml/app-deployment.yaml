@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apppolybot-deployment
-  spec:
+  name: polybot-deployment
+spec:
   selector:
     matchLabels:
       app: polybot

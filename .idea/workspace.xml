@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22de1698-2fee-4c27-a78d-261fd2a36e15" name="Changes" comment="}">
+    <list default="true" id="22de1698-2fee-4c27-a78d-261fd2a36e15" name="Changes" comment="pvc">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_03_2023_13_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_03_2023_13_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yaml/nginx-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yaml/nginx-deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -54,13 +58,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678887756410</updated>
-    </task>
-    <task id="LOCAL‎-00001" summary="Jenkins &amp; polytest">
-      <created>1678968862571</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL‎-00001" />
-      <option name="project" value="LOCAL‎" />
-      <updated>1678968862571</updated>
     </task>
     <task id="LOCAL‎-00002" summary="Jenkins &amp; polytest1">
       <created>1679233326223</created>
@@ -146,7 +143,266 @@
       <option name="project" value="LOCAL‎" />
       <updated>1680449799080</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL‎-00014" summary="yaml files">
+      <created>1682399060439</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL‎-00014" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1682399060439</updated>
+    </task>
+    <task id="LOCAL‎-00015" summary="yaml files">
+      <created>1682875733021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL‎-00015" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1682875733021</updated>
+    </task>
+    <task id="LOCAL‎-00016" summary="nginx files">
+      <created>1683110286467</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL‎-00016" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683110286467</updated>
+    </task>
+    <task id="LOCAL‎-00017" summary="nginx yaml">
+      <created>1683120447117</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL‎-00017" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683120447117</updated>
+    </task>
+    <task id="LOCAL‎-00018" summary="nginx-service.yaml">
+      <created>1683122127293</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL‎-00018" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683122127293</updated>
+    </task>
+    <task id="LOCAL‎-00019" summary="nginx-deployment.yaml.yaml">
+      <created>1683122474651</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL‎-00019" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683122474651</updated>
+    </task>
+    <task id="LOCAL‎-00020" summary="nginx-deployment.yaml.yaml">
+      <created>1683123207196</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL‎-00020" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683123207196</updated>
+    </task>
+    <task id="LOCAL‎-00021" summary="nginx-deployment.yaml.yaml">
+      <created>1683124028148</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL‎-00021" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683124028148</updated>
+    </task>
+    <task id="LOCAL‎-00022" summary="nginx-deployment.yaml.yaml">
+      <created>1683124060872</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL‎-00022" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683124060872</updated>
+    </task>
+    <task id="LOCAL‎-00023" summary="nginx-deployment.yaml">
+      <created>1683132103575</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL‎-00023" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683132103576</updated>
+    </task>
+    <task id="LOCAL‎-00024" summary="nginx-deployment.yaml">
+      <created>1683132418434</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL‎-00024" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683132418435</updated>
+    </task>
+    <task id="LOCAL‎-00025" summary="nginx-ingress.yaml">
+      <created>1683134442689</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL‎-00025" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683134442690</updated>
+    </task>
+    <task id="LOCAL‎-00026" summary="Liveness and Readiness probes">
+      <created>1683532615918</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL‎-00026" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683532615919</updated>
+    </task>
+    <task id="LOCAL‎-00027" summary="Liveness and Readiness probes">
+      <created>1683532750085</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL‎-00027" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683532750085</updated>
+    </task>
+    <task id="LOCAL‎-00028" summary="Liveness and Readiness probes">
+      <created>1683533194433</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL‎-00028" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683533194434</updated>
+    </task>
+    <task id="LOCAL‎-00029" summary="1">
+      <created>1683534289954</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL‎-00029" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683534289954</updated>
+    </task>
+    <task id="LOCAL‎-00030" summary="1">
+      <created>1683534341401</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL‎-00030" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683534341401</updated>
+    </task>
+    <task id="LOCAL‎-00031" summary="1">
+      <created>1683534793582</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL‎-00031" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683534793582</updated>
+    </task>
+    <task id="LOCAL‎-00032" summary="HPA &amp;&amp; livenessProbe">
+      <created>1683537839898</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL‎-00032" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683537839898</updated>
+    </task>
+    <task id="LOCAL‎-00033" summary="HPA &amp;&amp; livenessProbe">
+      <created>1683538629009</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL‎-00033" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683538629009</updated>
+    </task>
+    <task id="LOCAL‎-00034" summary="HPA &amp;&amp; livenessProbe">
+      <created>1683539133682</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL‎-00034" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683539133683</updated>
+    </task>
+    <task id="LOCAL‎-00035" summary="HPA &amp;&amp; livenessProbe">
+      <created>1683539268704</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL‎-00035" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683539268704</updated>
+    </task>
+    <task id="LOCAL‎-00036" summary="1">
+      <created>1683539296630</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL‎-00036" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683539296630</updated>
+    </task>
+    <task id="LOCAL‎-00037" summary="1">
+      <created>1683539583280</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL‎-00037" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683539583280</updated>
+    </task>
+    <task id="LOCAL‎-00038" summary="1">
+      <created>1683539678600</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL‎-00038" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683539678600</updated>
+    </task>
+    <task id="LOCAL‎-00039" summary="1">
+      <created>1683540116975</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL‎-00039" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683540116975</updated>
+    </task>
+    <task id="LOCAL‎-00040" summary="resources">
+      <created>1683540781627</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL‎-00040" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683540781628</updated>
+    </task>
+    <task id="LOCAL‎-00041" summary="resources">
+      <created>1683541240277</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL‎-00041" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683541240277</updated>
+    </task>
+    <task id="LOCAL‎-00042" summary="resources">
+      <created>1683541315447</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL‎-00042" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683541315447</updated>
+    </task>
+    <task id="LOCAL‎-00043" summary="resources">
+      <created>1683541351834</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL‎-00043" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683541351834</updated>
+    </task>
+    <task id="LOCAL‎-00044" summary="resources">
+      <created>1683541424881</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL‎-00044" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683541424881</updated>
+    </task>
+    <task id="LOCAL‎-00045" summary="resources">
+      <created>1683546061405</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL‎-00045" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683546061406</updated>
+    </task>
+    <task id="LOCAL‎-00046" summary="resources">
+      <created>1683546131353</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL‎-00046" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683546131353</updated>
+    </task>
+    <task id="LOCAL‎-00047" summary="resources">
+      <created>1683546142744</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL‎-00047" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683546142744</updated>
+    </task>
+    <task id="LOCAL‎-00048" summary="pvc">
+      <created>1683546340609</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL‎-00048" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683546340610</updated>
+    </task>
+    <task id="LOCAL‎-00049" summary="pvc">
+      <created>1683548268251</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL‎-00049" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683548268251</updated>
+    </task>
+    <task id="LOCAL‎-00050" summary="pvc">
+      <created>1683548327560</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL‎-00050" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1683548327563</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +422,18 @@
     <MESSAGE value="Jenkinsfile docker login" />
     <MESSAGE value="Jenkinsfile" />
     <MESSAGE value="}" />
-    <option name="LAST_COMMIT_MESSAGE" value="}" />
+    <MESSAGE value="yaml files" />
+    <MESSAGE value="nginx files" />
+    <MESSAGE value="nginx yaml" />
+    <MESSAGE value="nginx-service.yaml" />
+    <MESSAGE value="nginx-deployment.yaml.yaml" />
+    <MESSAGE value="nginx-deployment.yaml" />
+    <MESSAGE value="nginx-ingress.yaml" />
+    <MESSAGE value="Liveness and Readiness probes" />
+    <MESSAGE value="HPA &amp;&amp; livenessProbe" />
+    <MESSAGE value="1" />
+    <MESSAGE value="resources" />
+    <MESSAGE value="pvc" />
+    <option name="LAST_COMMIT_MESSAGE" value="pvc" />
   </component>
 </project>

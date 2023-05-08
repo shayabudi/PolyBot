@@ -13,17 +13,12 @@ spec:
       labels:
         app: nginx
         tier: backend
-  volumes:
-    - name: task-pv-storage
-      persistentVolumeClaim:
-        claimName: nginxpvc
+
     spec:
       containers:
       - name: nginx
         image: shayabudi8/nginx:nginx
-      volumeMounts:
-        - mountPath: "/usr/share/nginx/html"
-          name: task-pv-storage
+
         resources:
           limits:
             cpu: "1"

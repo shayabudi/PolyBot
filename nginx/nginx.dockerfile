@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y nginx
 
 #RUN rm /var/www/html/index.nginx-debian.html
 
+WORKDIR /app
+
 COPY /index.html /var/www/html
 
 CMD ["nginx", "-g", "daemon off;"]

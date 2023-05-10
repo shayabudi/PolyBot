@@ -21,7 +21,7 @@ spec:
             claimName: nginx-pvc
       containers:
       - name: nginx
-        image: shayabudi8/nginx:nginx
+        image: shayabudi8/nginx:nginx2
         volumeMounts:
           - mountPath: "/app"
             name: nginx-pvc

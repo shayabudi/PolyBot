@@ -15,9 +15,16 @@ spec:
         tier: backend
 
     spec:
+      volumes:
+        - name: nginx-pvc
+          persistentVolumeClaim:
+            claimName: nginx-pvc
       containers:
       - name: nginx
         image: shayabudi8/nginx:nginx
+        volumeMounts:
+          - mountPath: "/app"
+            name: nginx-pvc
 
         resources:
           limits:

@@ -1,0 +1,27 @@
+image:
+  repository: shayabudi8/nginx
+  tag: nginx
+  pullPolicy: InfotPresent
+name: nginx
+
+service:
+  protocol: TCP
+  port: 8082
+  targetPort: 8082
+
+volume:
+  name: nginx-pvc
+
+resources:
+  limits:
+    cpu: "1"
+    memory: "100Mi"
+  requests:
+    cpu: "0.5"
+    memory: "50Mi"
+
+livenessProbe:
+ initialDelaySeconds: 1
+ periodSeconds: 5
+
+#namespace: demoapp

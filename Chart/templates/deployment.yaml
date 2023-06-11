@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  #namespace:   {{ include "common.names.namespace" . | quote }}z
+
 
 spec:
  replicas: 1

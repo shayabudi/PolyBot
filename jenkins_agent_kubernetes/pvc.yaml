@@ -1,0 +1,11 @@
+#this pvc is created to connect between the container and the docker daemon -docker.sock
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkinsagent-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

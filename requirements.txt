@@ -3,3 +3,4 @@ youtube-dl>=2021.12.17
 loguru
 pylint
 pytest
+tornado>=6.3.3 # not directly required, pinned by Snyk to avoid a vulnerability
